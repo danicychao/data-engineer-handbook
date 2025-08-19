@@ -1,0 +1,6 @@
+$SPARK_HOME/bin/pyspark \
+  --packages org.apache.iceberg:iceberg-spark-runtime-3.5_2.13:1.5.2 \
+  --conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions \
+  --conf spark.sql.catalog.hadoop_cat=org.apache.iceberg.spark.SparkCatalog \
+  --conf spark.sql.catalog.hadoop_cat.type=hadoop \
+  --conf spark.sql.catalog.hadoop_cat.warehouse=/Users/danichao/iceberg_warehouse
